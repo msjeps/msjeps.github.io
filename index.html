@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Outils EPS — Applications</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: sans-serif;
+    background: #0f172a;
+    color: #f1f5f9;
+    min-height: 100vh;
+    padding: 24px 16px 48px;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  h1 {
+    font-size: 1.6rem;
+    margin-bottom: 6px;
+  }
+  header p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+  }
+  .apps {
+    max-width: 480px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .app-link {
+    display: block;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    padding: 18px 20px;
+    color: #f1f5f9;
+    text-decoration: none;
+    min-height: 48px;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .app-link:active,
+  .app-link:hover {
+    background: #334155;
+    border-color: #64748b;
+  }
+  .app-name {
+    font-size: 1.05rem;
+    font-weight: bold;
+  }
+  .app-desc {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    margin-top: 3px;
+  }
+  footer {
+    text-align: center;
+    color: #64748b;
+    font-size: 0.8rem;
+    margin-top: 40px;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Outils EPS</h1>
+    <p>Applications pour cours d'EPS — Nathalie Prenois</p>
+  </header>
+
+  <main class="apps">
+    <a class="app-link" href="/BiathlonVMA/">
+      <div class="app-name">Biathlon VMA</div>
+      <div class="app-desc">Test d'endurance VMA, protocole 6×4 min</div>
+    </a>
+    <a class="app-link" href="/epslaserfit/">
+      <div class="app-name">LaserFit</div>
+      <div class="app-desc">Évaluation fitness — endurance, flexibilité, puissance</div>
+    </a>
+    <a class="app-link" href="/TEN-EPS/">
+      <div class="app-name">TEN EPS</div>
+      <div class="app-desc">Tennis — protocole de jeu, scores, classement</div>
+    </a>
+    <a class="app-link" href="/VB-EPS/">
+      <div class="app-name">VB EPS</div>
+      <div class="app-desc">Volley-ball — protocoles de jeu, scores, classement</div>
+    </a>
+    <a class="app-link" href="/VIDEO_EPS/">
+      <div class="app-name">EPSetVIDEO</div>
+      <div class="app-desc">Enregistrement et analyse vidéo sportive</div>
+    </a>
+    <a class="app-link" href="/scaneps/">
+      <div class="app-name">Scan EPS</div>
+      <div class="app-desc">Scan / évaluation EPS</div>
+    </a>
+  </main>
+
+  <footer>outils-eps.fr</footer>
+</body>
+</html>
