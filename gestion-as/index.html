@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Gestion AS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#177261">
+<link rel="apple-touch-icon" sizes="180x180" href="logo-as-180.png">
+<link rel="icon" type="image/png" href="logo-as-180.png">
+<style>
+  body { margin: 0; font-family: -apple-system, system-ui, sans-serif; background: #177261; color: #fff;
+         display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; text-align: center; padding: 24px; box-sizing: border-box; }
+  img { width: 120px; height: 120px; border-radius: 26px; margin-bottom: 16px; }
+  h1 { margin: 0 0 8px; font-size: 1.5rem; }
+  p { max-width: 22rem; line-height: 1.45; margin: 8px 0; }
+  a.bouton { display: inline-block; margin-top: 16px; padding: 14px 28px; background: #fff; color: #177261; font-weight: 700; border-radius: 12px; text-decoration: none; }
+</style>
+</head>
+<body>
+<!-- Page-relais : sert uniquement à porter le logo (apple-touch-icon) que Apps Script ne sait pas poser, puis renvoie vers l'appli.
+     Aucune donnée : l'appli reste protégée par la connexion Google du domaine msjantibes.fr. Voir docs/deploiement.md (§ logo). -->
+<img src="logo-as-180.png" alt="Logo AS">
+<h1>Gestion AS</h1>
+<p id="message">Pour épingler l'appli avec son logo : touche <strong>Partager</strong> (carré avec une flèche), puis <strong>Sur l'écran d'accueil</strong>.</p>
+<a class="bouton" id="ouvrir" href="#">Ouvrir l'appli</a>
+<script>
+  var APPLI = 'https://script.google.com/a/macros/msjantibes.fr/s/AKfycbx9oKowTBKSkoboVACh-JLHwaQgCYIhp-eyVKR9KM3JtT49Zot3IOcVjvx7oSC_DPF0xQ/exec';
+  document.getElementById('ouvrir').href = APPLI;
+  if (/[?&]go=1/.test(location.search)) {
+    // Lancement depuis l'écran d'accueil (ou lien enregistré) : on ouvre l'appli.
+    document.getElementById('message').textContent = 'Ouverture de l’appli…';
+    location.replace(APPLI);
+  } else {
+    // Première visite : on affiche les consignes, et on fait pointer l'adresse courante sur ?go=1, de sorte que le raccourci
+    // ajouté à l'écran d'accueil (iOS enregistre l'adresse affichée à ce moment-là) redirige directement vers l'appli.
+    try { history.replaceState(null, '', location.pathname + '?go=1'); } catch (e) { /* sans effet : le bouton reste utilisable */ }
+  }
+</script>
+</body>
+</html>
