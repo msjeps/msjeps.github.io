@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Outils EPS — Applications</title>
-<meta name="description" content="Applications EPS gratuites et hors ligne : Biathlon VMA, LaserFit, Match Manager, VB EPS, EPSetVIDEO, Scan EPS. Par Nathalie Prenois, professeure d'EPS.">
+<meta name="description" content="Applications EPS gratuites et hors ligne : Biathlon VMA, LaserFit, Match Manager, VB EPS, EPSetVIDEO, Scan EPS, Compteur Lutte, EDT EPS. Par Nathalie Prenois, professeure d'EPS.">
 <link rel="canonical" href="https://apps.outils-eps.fr/">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -33,6 +33,16 @@
     display: flex;
     flex-direction: column;
     gap: 14px;
+  }
+  .section-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #64748b;
+    margin: 28px 0 -2px;
+  }
+  .apps .section-title:first-child {
+    margin-top: 0;
   }
   .app-link {
     display: block;
@@ -74,29 +84,40 @@
   </header>
 
   <main class="apps">
+    <p class="section-title">Applications pour les cours</p>
     <a class="app-link" href="/BiathlonVMA/">
       <div class="app-name">Biathlon VMA</div>
-      <div class="app-desc">Test d'endurance VMA, protocole 6×4 min</div>
+      <div class="app-desc">Évaluer l'allure, la régularité et les lancers sans multiplier les relevés papier</div>
     </a>
     <a class="app-link" href="/epslaserfit/">
       <div class="app-name">LaserFit</div>
-      <div class="app-desc">Évaluation fitness — endurance, flexibilité, puissance</div>
+      <div class="app-desc">Organiser des séquences de tirs laser et d'exercices de fitness, score de chaque élève calculé automatiquement</div>
     </a>
     <a class="app-link" href="/Match-Manager-EPS/">
       <div class="app-name">Match Manager EPS</div>
-      <div class="app-desc">Tennis — protocole de jeu, scores, classement</div>
+      <div class="app-desc">Organiser les rencontres, les terrains, les arbitres et les classements sans jongler entre plusieurs feuilles</div>
     </a>
     <a class="app-link" href="/VB-EPS/">
       <div class="app-name">VB EPS</div>
-      <div class="app-desc">Volley-ball — protocoles de jeu, scores, classement</div>
+      <div class="app-desc">Volley-ball — protocoles de jeu, scores et classement par équipe</div>
+    </a>
+    <a class="app-link" href="/compteur-lutte/">
+      <div class="app-name">Compteur Lutte</div>
+      <div class="app-desc">Lutte au sol — chronométrage, scoring en temps réel et classement par équipe</div>
     </a>
     <a class="app-link" href="/VIDEO_EPS/">
       <div class="app-name">EPSetVIDEO</div>
-      <div class="app-desc">Enregistrement et analyse vidéo sportive</div>
+      <div class="app-desc">Filmer, ralentir, comparer et annoter une prestation directement sur la tablette, sans stockage cloud</div>
     </a>
     <a class="app-link" href="/scaneps/">
       <div class="app-name">Scan EPS</div>
-      <div class="app-desc">Scanner universel de QR codes, compatible avec les applis EPS. Toutes les données regroupées dans un seul fichier</div>
+      <div class="app-desc">Récupérer rapidement les résultats des élèves grâce aux QR codes, dans un seul fichier</div>
+    </a>
+
+    <p class="section-title">Outils de coordination EPS</p>
+    <a class="app-link" href="/edt-eps/">
+      <div class="app-name">EDT EPS</div>
+      <div class="app-desc">Centraliser installations, créneaux, enseignants, classes et transports pour construire les emplois du temps EPS et récupérer en un clic les fiches synthèse de la programmation, des réservations de bus et de toutes les tâches incombant au coordo</div>
     </a>
   </main>
 
